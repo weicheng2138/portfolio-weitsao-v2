@@ -1,15 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+$ install
+pnpm install
+
+$ dev
 pnpm dev
+
+$ build
+pnpm build
+
+$ serve
+pnpm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -22,14 +26,59 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Tailwindcss
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```js
+/** tailwind.config.js */
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+       ^^^
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+       ^^^
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+```css
+/** globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### Automatic Class Sorting with Prettier
+
+```bash
+pnpm install -D prettier prettier-plugin-tailwindcss
+```
+
+> Note that plugin autoloading is not supported when using certain package managers, such as pnpm or Yarn PnP. In this case you may need to add the plugin to your Prettier config explicitly:
+
+.prettierrc
+
+```json
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "printWidth": 80,
+  "arrowParens": "always",
+  "plugins": ["prettier-plugin-tailwindcss"]
+}
+```
 
 ## Deploy on Vercel
 
