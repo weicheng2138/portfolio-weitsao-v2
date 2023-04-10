@@ -1,3 +1,13 @@
+# Winnie's Portfolio with Next.js
+
+A new version of server-side rendering portfolio app.
+
+## Features
+
+- [x] 🌊 [Tailwindcss](https://tailwindcss.nuxt.dev/)
+- [x] ✨ Eslint & lint-staged
+- [x] 🐕 Husky & cz (with commitizen installed globally)
+
 ## Getting Started
 
 First, run the development server:
@@ -84,9 +94,85 @@ pnpm install -D prettier prettier-plugin-tailwindcss
 
 ### Husky
 
+It will help us to setup Git Hooks easier.
+
 ```shell
 pnpm install -D husky
 npx husky install
+
+npx husky add .husky/pre-commit
+```
+
+.husky/pre-commit
+
+```shell
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '🏗️👷 Styling your project before committing👷‍♂️🏗️'
+echo 'please be patient, this may take a while...'
+
+# Check ESLint Standards
+pnpm lint ||
+(
+    echo '🔨❌ Yoo, you have a problem in your code. Check linter 🔨❌
+          Run yarn lint, add changes and try commit again.';
+    false;
+)
+echo '🎉 No error found: committing this now.... ✨🚀🏄‍♂️🍻'
+
+npx lint-staged
+```
+
+package.json
+
+```json
+"scripts": {
+  "postinstall": "husky install",
+}
+```
+
+### lint-staged
+
+It will help us to run a certain task before commiting our code, and it will make sure that our code is clean and well formatted.
+
+```shell
+pnpm install -D lint-staged
+```
+
+package.json
+
+```json
+"lint-staged": {
+    // ... this mean any file with the extension of js, jsx,
+    // ts, and tsx will be checked by eslint and formatted by prettier
+    "**/*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --config ./.prettierrc.js --write"],
+
+    // ... this mean any file with the extension of css,
+    // scss, md, html, and json will be formatted by prettier
+    "**/*.{css,scss,md,html,json}": ["prettier --config ./.prettierrc.js --write"]
+}
+```
+
+### Commitizen
+
+It will help us to organize our commit message, and it will make sure that our commit message is clear and easy to understand.
+
+```shell
+pnpm install -g commitizen
+commitizen init cz-conventional-changelog --pnpm --dev --exact
+```
+
+package.json will automatically generate the config below in your `package.json`
+
+```json
+{
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
 ```
 
 ## Deploy on Vercel
