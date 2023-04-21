@@ -1,8 +1,4 @@
 import Head from 'next/head';
-// import { Inter } from 'next/font/google';
-
-// const inter = Inter({ subsets: ['latin'] });
-
 export default function Home() {
   return (
     <>
@@ -13,7 +9,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Home Page</h1>
+        {/* <h1 className={`${serifTC.className} font-bold text-blue-900`}>
+          Home Page 123 首頁
+        </h1>
+        <h2 className={`${serifTC.className} font-black`}>Black 文字</h2>
+        <h2 className={sansTC.className}>Regular 文字</h2> */}
+        <h1 className={` font-notoSerif font-bold text-blue-900`}>
+          Home Page 123 首頁
+        </h1>
+        <h2 className={` font-notoSerif font-black`}>Black 文字</h2>
+        <h2 className=" font-notoSans">Regular 文字</h2>
       </main>
     </>
   );
