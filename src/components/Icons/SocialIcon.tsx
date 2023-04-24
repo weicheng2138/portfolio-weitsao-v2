@@ -24,16 +24,14 @@ const SocialIcon = ({ kind, href }: Props) => {
     return null;
   }
   return (
-    <>
-      <a
-        className=" block w-10"
-        href={kind === 'gmail' ? `mailto:${href}` : href}
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <Image width={40} height={40} src={srcKind[kind]} alt="site-icon" />
-      </a>
-    </>
+    <a
+      className=" block w-10"
+      href={kind === 'gmail' ? `mailto:${href}` : href}
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      <Image width={40} height={40} src={srcKind[kind]} alt="site-icon" />
+    </a>
   );
 };
 

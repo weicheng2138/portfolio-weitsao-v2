@@ -25,7 +25,7 @@ export default function Home() {
         <SiteIcon />
         <SocialIcon kind="behance" href="https://google.com" />
         <SocialIcon kind="gmail" href="hl6jo3@gmail.com" />
-        <AboutPageIcon src="/images/about-drawing.png" />
+        {/* <AboutPageIcon src="/images/about-drawing.png" /> */}
         <CustomLink href="https://google.com" />
       </main>
     </>
