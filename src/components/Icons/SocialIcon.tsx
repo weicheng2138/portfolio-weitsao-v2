@@ -1,4 +1,8 @@
 import Image from 'next/image';
+import BehanceSVG from './behance.svg';
+import InstagramSVG from './ig.svg';
+import CakeresumeSVG from './cakeResume.svg';
+import GmailSVG from './gmail.svg';
 
 type Props = {
   kind: 'behance' | 'instagram' | 'cakeresume' | 'gmail';
@@ -6,10 +10,10 @@ type Props = {
 };
 
 const srcKind = {
-  behance: 'behance.svg',
-  instagram: 'ig.svg',
-  cakeresume: 'cakeResume.svg',
-  gmail: 'gmail.svg',
+  behance: BehanceSVG,
+  instagram: InstagramSVG,
+  cakeresume: CakeresumeSVG,
+  gmail: GmailSVG,
 };
 const SocialIcon = ({ kind, href }: Props) => {
   if (

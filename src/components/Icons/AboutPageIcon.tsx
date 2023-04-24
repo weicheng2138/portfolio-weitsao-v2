@@ -4,7 +4,7 @@ type Props = {
   src: string;
 };
 
-const AboutIcon = ({ src }: Props) => {
+const AboutPageIcon = ({ src }: Props) => {
   return (
     <>
       <Image
@@ -18,4 +18,4 @@ const AboutIcon = ({ src }: Props) => {
   );
 };
 
-export default AboutIcon;
+export default AboutPageIcon;

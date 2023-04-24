@@ -1,7 +1,8 @@
-import AboutIcon from '@/components/Icons/AboutIcon';
+import AboutPageIcon from '@/components/Icons/AboutPageIcon';
 import SiteIcon from '@/components/Icons/SiteIcon';
 import SocialIcon from '@/components/Icons/SocialIcon';
 import Head from 'next/head';
+
 export default function Home() {
   return (
     <>
@@ -25,7 +26,7 @@ export default function Home() {
         <SiteIcon />
         <SocialIcon kind="behance" href="https://google.com" />
         <SocialIcon kind="gmail" href="hl6jo3@gmail.com" />
-        <AboutIcon src="/images/about-figma.png" />
+        <AboutPageIcon src="/images/about-drawing.png" />
       </main>
     </>
   );
