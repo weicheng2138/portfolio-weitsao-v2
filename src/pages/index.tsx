@@ -1,7 +1,5 @@
-import CustomLink from '@/components/CustomLink/CustomLink';
-import AboutPageIcon from '@/components/Icons/AboutPageIcon';
-import SiteIcon from '@/components/Icons/SiteIcon';
-import SocialIcon from '@/components/Icons/SocialIcon';
+import CustomLink from '@/components/CustomLink';
+import { SiteIcon, SocialIcon, AboutPageIcon } from '@/components/Icons';
 import Head from 'next/head';
 
 export default function Home() {
@@ -28,7 +26,7 @@ export default function Home() {
         <SocialIcon kind="behance" href="https://google.com" />
         <SocialIcon kind="gmail" href="hl6jo3@gmail.com" />
         <AboutPageIcon src="/images/about-drawing.png" />
-        <CustomLink href="https://github.com" />
+        <CustomLink href="https://google.com" />
       </main>
     </>
   );

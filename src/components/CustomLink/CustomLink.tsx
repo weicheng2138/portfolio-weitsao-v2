@@ -1,7 +1,5 @@
 import Link from 'next/link';
-import GithubSVG from './github.svg';
-import ExternalLinkSVG from './external-link.svg';
-import Image from 'next/image';
+import { LinkIcon } from '@/components/Icons';
 
 type AnchorProps = React.ComponentPropsWithoutRef<'a'>;
 const CustomLink = ({ href, children, ...rest }: AnchorProps) => {
@@ -25,23 +23,7 @@ const CustomLink = ({ href, children, ...rest }: AnchorProps) => {
       <a target="_blank" rel="noopener noreferrer" href={href} {...rest}>
         {children}
         {typeof children === 'undefined' &&
-          (isGithub ? (
-            <Image
-              src={GithubSVG}
-              width={16}
-              height={16}
-              alt="github link"
-              className="ml-1 inline-block h-4 w-4"
-            />
-          ) : (
-            <Image
-              src={ExternalLinkSVG}
-              width={16}
-              height={16}
-              alt="external link"
-              className="ml-1 inline-block h-4 w-4"
-            />
-          ))}
+          (isGithub ? <LinkIcon kind="github" /> : <LinkIcon />)}
       </a>
     );
   };
