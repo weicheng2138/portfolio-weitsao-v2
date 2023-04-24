@@ -1,3 +1,4 @@
+import CustomLink from '@/components/CustomLink/CustomLink';
 import AboutPageIcon from '@/components/Icons/AboutPageIcon';
 import SiteIcon from '@/components/Icons/SiteIcon';
 import SocialIcon from '@/components/Icons/SocialIcon';
@@ -27,6 +28,7 @@ export default function Home() {
         <SocialIcon kind="behance" href="https://google.com" />
         <SocialIcon kind="gmail" href="hl6jo3@gmail.com" />
         <AboutPageIcon src="/images/about-drawing.png" />
+        <CustomLink href="https://github.com" />
       </main>
     </>
   );
