@@ -30,7 +30,7 @@ const SocialIcon = ({ kind, href }: Props) => {
       target="_blank"
       rel="noreferrer noopener"
     >
-      <Image width={40} height={40} src={srcKind[kind]} alt="site-icon" />
+      <Image width={48} height={48} src={srcKind[kind]} alt="site-icon" />
     </a>
   );
 };

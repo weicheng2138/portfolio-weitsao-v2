@@ -14,10 +14,10 @@ const LinkIcon = ({ kind = 'default' }: Props) => {
   return (
     <Image
       src={srcKind[kind]}
-      width={16}
-      height={16}
+      width={48}
+      height={48}
       alt="github link"
-      className="ml-1 inline-block h-4 w-4"
+      className="ml-1 inline-block h-12 w-12"
     />
   );
 };

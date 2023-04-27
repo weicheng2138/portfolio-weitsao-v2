@@ -24,11 +24,16 @@ const Layout: FC<Props> = ({ children, font }) => {
         <div>
           <Header>
             <Hamburger
-              className="fixed right-0 top-0 z-50"
+              className="absolute right-0 top-0 z-50"
               handleHamburgerClick={handleHamburgerClick}
+              isOpen={show}
             />
             <Drawer className="absolute right-0 z-40" isShow={show} />
-            <Overlay className="absolute inset-0 z-30" isShow={show} />
+            <Overlay
+              className="absolute inset-0 z-30"
+              isShow={show}
+              handleClick={handleHamburgerClick}
+            />
           </Header>
           <main className="flex-1">{children}</main>
         </div>

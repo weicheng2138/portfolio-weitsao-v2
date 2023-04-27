@@ -39,6 +39,63 @@ module.exports = {
         notoSerif: ['var(--font-notoSerifTC)', 'sans-serif'],
         notoSans: ['var(--font-notoSansTC)', 'San Francisco'],
       },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        beforeHamburgerIn: {
+          '0%': {
+            transform: 'translateY(-8px)',
+          },
+          '50%': {
+            transform: 'translate(0px, 0px)',
+          },
+          '100%': {
+            transform: 'rotate(45deg)',
+          },
+        },
+        afterHamburgerIn: {
+          '0%': {
+            transform: 'translateY(8px)',
+          },
+          '50%': {
+            transform: 'translate(0px, 0px)',
+          },
+          '100%': {
+            transform: 'rotate(-45deg)',
+          },
+        },
+        beforeHamburgerOut: {
+          '0%': {
+            transform: 'rotate(45deg)',
+          },
+          '50%': {
+            transform: 'rotate(0deg)',
+          },
+          '100%': {
+            transform: 'translateY(-8px)',
+          },
+        },
+        afterHamburgerOut: {
+          '0%': {
+            transform: 'rotate(-45deg)',
+          },
+          '50%': {
+            transform: 'rotate(0deg)',
+          },
+          '100%': {
+            transform: 'translateY(8px)',
+          },
+        },
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+        beforeHamburgerIn: 'beforeHamburgerIn 1s forwards',
+        afterHamburgerIn: 'afterHamburgerIn 1s forwards',
+        beforeHamburgerOut: 'beforeHamburgerOut 0.5s forwards',
+        afterHamburgerOut: 'afterHamburgerOut 1s forwards',
+      },
     },
   },
   plugins: [],
