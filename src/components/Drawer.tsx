@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { FC } from 'react';
 
 type Props = {
@@ -7,9 +8,13 @@ type Props = {
 const Drawer: FC<Props> = ({ isShow, className }) => {
   return (
     <>
-      {isShow && (
-        <div className={`${className} min-h-screen w-[40%] bg-slate-400`}></div>
-      )}
+      <div
+        className={clsx(
+          { 'translate-x-0': isShow },
+          className,
+          'inset-y-0 h-full w-[40%] translate-x-full bg-slate-400 transition'
+        )}
+      ></div>
     </>
   );
 };

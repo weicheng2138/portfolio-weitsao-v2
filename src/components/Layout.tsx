@@ -28,7 +28,7 @@ const Layout: FC<Props> = ({ children, font }) => {
               handleHamburgerClick={handleHamburgerClick}
               isOpen={show}
             />
-            <Drawer className="absolute right-0 z-40" isShow={show} />
+            <Drawer className="fixed right-0 z-40" isShow={show} />
             <Overlay
               className="absolute inset-0 z-30"
               isShow={show}
