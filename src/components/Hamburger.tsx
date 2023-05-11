@@ -20,20 +20,18 @@ const Hamburger: FC<Props> = ({ handleHamburgerClick, className, isOpen }) => {
   }
   return (
     <>
-      <div className={`${className}`}>
-        <button
-          aria-label="menu button"
-          className="h-10 w-10 "
-          onClick={() => handleHamburgerClick()}
-        >
-          <div
-            className={clsx(
-              { 'bg-transparent': isOpen },
-              `${beforeHamburger} ${afterHamburger} absolute inset-0 m-auto inline-block h-[1px] w-[26px] rounded-[1px] bg-black transition`
-            )}
-          ></div>
-        </button>
-      </div>
+      <button
+        aria-label="menu button"
+        className={`${className} mr-2 mt-4 h-10 w-10`}
+        onClick={() => handleHamburgerClick()}
+      >
+        <div
+          className={clsx(
+            { 'bg-transparent': isOpen },
+            `${beforeHamburger} ${afterHamburger} absolute inset-0 m-auto inline-block h-[1px] w-[26px] rounded-[1px] bg-black transition`
+          )}
+        ></div>
+      </button>
     </>
   );
 };

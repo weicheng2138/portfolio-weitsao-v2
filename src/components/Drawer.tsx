@@ -11,8 +11,9 @@ const Drawer: FC<Props> = ({ isShow, className }) => {
       <div
         className={clsx(
           { 'translate-x-0': isShow },
+          { 'translate-x-full': !isShow },
           className,
-          'inset-y-0 h-full w-[40%] translate-x-full bg-slate-400 transition'
+          'inset-y-0 h-full min-w-[75vw] bg-slate-400 opacity-80 transition'
         )}
       ></div>
     </>

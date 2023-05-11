@@ -1,5 +1,5 @@
 import CustomLink from '@/components/CustomLink';
-import { SiteIcon, SocialIcon, AboutPageIcon } from '@/components/Icons';
+import { SiteIcon, SocialIcon } from '@/components/Icons';
 import Head from 'next/head';
 
 export default function Home() {
