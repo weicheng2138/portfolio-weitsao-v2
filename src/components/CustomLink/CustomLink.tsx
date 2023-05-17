@@ -15,7 +15,7 @@ const CustomLink = ({ href, children, ...rest }: AnchorProps) => {
     );
 
   const NoHrefComponent = () => {
-    return <span>There is no href right now</span>;
+    return <span className="text-red-600">There is no href right now</span>;
   };
   const ExternalLink = () => {
     const isGithub = href?.includes('github.com');

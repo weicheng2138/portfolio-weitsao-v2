@@ -36,13 +36,12 @@ const Layout: FC<Props> = ({ children, font }) => {
       <div
         className={`${font} relative flex min-h-screen w-full flex-col justify-between`}
       >
-        <Header className="sticky top-0 z-50">
-          <Hamburger
-            className="absolute right-0 top-0 sm:hidden"
-            handleHamburgerClick={handleHamburgerClick}
-            isOpen={show}
-          />
-        </Header>
+        <Header className="sticky top-0 z-20"></Header>
+        <Hamburger
+          className="absolute right-0 top-0 z-50 sm:hidden"
+          handleHamburgerClick={handleHamburgerClick}
+          isOpen={show}
+        />
         <main className="flex-1">{children}</main>
 
         <Drawer className="fixed right-0 z-40" isShow={show} />
