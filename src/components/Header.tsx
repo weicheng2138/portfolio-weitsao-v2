@@ -9,15 +9,17 @@ const Header: FC<Props> = ({ className }) => {
   return (
     <>
       <header
-        className={`${className} flex h-20 items-center justify-between px-2 py-4`}
+        className={`${className} flex items-center justify-between px-4 py-2 sm:px-8`}
       >
         <CustomLink href="/">
           <div className="flex items-center gap-4">
             <SiteIcon />
-            <h1 className="font-notoSans text-sm font-normal">WEI．TSAO</h1>
+            <h1 className="font-notoSans text-sm font-normal text-secondary04">
+              WEI．TSAO
+            </h1>
           </div>
         </CustomLink>
-        <div className="hidden sm:flex sm:items-center">
+        <div className="hidden text-sm text-secondary04 sm:flex sm:items-center">
           <CustomLink href="/projects">
             <span className="p-4 hover:text-primary">設計作品</span>
           </CustomLink>
