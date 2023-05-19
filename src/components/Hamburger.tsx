@@ -22,7 +22,7 @@ const Hamburger: FC<Props> = ({ handleHamburgerClick, className, isOpen }) => {
     <>
       <button
         aria-label="menu button"
-        className={`${className} mr-2 mt-4 h-10 w-10`}
+        className={`${className} h-10 w-10`}
         onClick={() => handleHamburgerClick()}
       >
         <div

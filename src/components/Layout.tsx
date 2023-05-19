@@ -34,11 +34,11 @@ const Layout: FC<Props> = ({ children, font }) => {
   return (
     <>
       <div
-        className={`${font} relative flex min-h-screen w-full flex-col justify-between`}
+        className={`${font} relative flex min-h-screen w-full flex-col justify-between bg-secondary01`}
       >
         <Header className="sticky top-0 z-20"></Header>
         <Hamburger
-          className="absolute right-0 top-0 z-50 sm:hidden"
+          className="absolute right-0 top-0 z-50 mr-4 mt-2 sm:hidden"
           handleHamburgerClick={handleHamburgerClick}
           isOpen={show}
         />
