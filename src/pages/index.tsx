@@ -2,8 +2,30 @@ import CustomLink from '@/components/CustomLink';
 import { SiteIcon, SocialIcon } from '@/components/Icons';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
+const periodDictionary = {
+  morning: '早安',
+  afternoon: '午安',
+  evening: '晚安',
+};
 export default function Home() {
+  const [periods, setPeriods] = useState<'morning' | 'afternoon' | 'evening'>(
+    'morning'
+  );
+
+  useEffect(() => {
+    const currentHour = new Date().getHours();
+
+    if (currentHour >= 0 && currentHour < 11) {
+      setPeriods(() => 'morning');
+    } else if (currentHour >= 11 && currentHour < 17) {
+      setPeriods(() => 'afternoon');
+    } else {
+      setPeriods(() => 'evening');
+    }
+  }, [periods]);
+
   return (
     <>
       <Head>
@@ -16,16 +38,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <section className="flex flex-col items-center justify-center pt-10 sm:flex-row sm:pt-20">
+        <section className="flex flex-col items-center justify-center pt-10 sm:flex-row-reverse sm:gap-6 sm:pt-20">
           <Image
             src={`/gif/site-cover.gif`}
             alt="site cover for portfolio"
             width={240}
             height={240}
+            priority
           />
           <div className="flex flex-col items-center justify-center">
             <h1 className="mt-6 font-notoSerif text-[32px] font-bold tracking-wide">
-              Hi！早安
+              Hi！{periodDictionary[periods]}
             </h1>
             <h1 className="font-notoSerif text-[32px] font-bold tracking-wide">
               我是 Winnie
