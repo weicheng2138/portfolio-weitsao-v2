@@ -1,3 +1,4 @@
+import CustomHR from '@/components/CustomHR';
 import CustomLink from '@/components/CustomLink';
 import { SiteIcon, SocialIcon } from '@/components/Icons';
 import Head from 'next/head';
@@ -38,7 +39,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <section className="flex flex-col items-center justify-center pt-10 sm:flex-row-reverse sm:gap-6 sm:pt-20">
+        <section className="mb-10 flex flex-col items-center justify-center pt-10 sm:mb-20 sm:flex-row-reverse sm:gap-6 sm:pt-20">
           <Image
             src={`/gif/site-cover.gif`}
             alt="site cover for portfolio"
@@ -47,18 +48,22 @@ export default function Home() {
             priority
           />
           <div className="flex flex-col items-center justify-center">
-            <h1 className="mt-6 font-notoSerif text-[32px] font-bold tracking-wide">
-              Hi！{periodDictionary[periods]}
-            </h1>
-            <h1 className="font-notoSerif text-[32px] font-bold tracking-wide">
-              我是 Winnie
-            </h1>
-            <p className="mt-10 font-notoSans text-lg font-light text-secondary03">
+            <h1 className="mt-6">Hi！{periodDictionary[periods]}</h1>
+            <h1>我是 Winnie</h1>
+            <p className="mt-10">
               我觀察細膩、擅於傾聽。我想做出好看好用、讓使用者感到溫暖的產品。正在朝向成為
               UI/UX 設計師持續精進中。
             </p>
           </div>
         </section>
+
+        <CustomHR direction="right" className="mb-10 sm:mb-20" />
+
+        <section id="project" className='className="mb-10 md:mb-20'>
+          <h2 className="mb-10">一起來看看我的 UI/UX 設計吧</h2>
+        </section>
+
+        <CustomHR direction="left" />
       </main>
     </>
   );

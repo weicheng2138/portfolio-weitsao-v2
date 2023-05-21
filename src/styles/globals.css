@@ -1,5 +1,28 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC:wght@700;900&display=swap'); */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+  @apply font-notoSerif text-[32px] font-bold tracking-wide;
+}
+
+h2 {
+  @apply font-notoSans text-xl tracking-wide text-secondary04;
+}
+
+h3 {
+  @apply font-notoSerif text-[20px] font-black text-primaryDark;
+}
+
+p {
+  @apply font-notoSans text-lg font-light text-secondary04;
+}
+
+li {
+  @apply font-notoSans text-secondary03;
+}
+
+a {
+  @apply font-sans;
+}
