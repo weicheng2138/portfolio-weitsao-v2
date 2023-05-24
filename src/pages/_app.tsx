@@ -5,7 +5,7 @@ import Layout from '@/components/Layout';
 
 const sansTC = Noto_Sans_TC({
   subsets: ['latin'],
-  weight: '400',
+  weight: ['300', '400'],
   variable: '--font-notoSansTC',
 });
 const serifTC = Noto_Serif_TC({

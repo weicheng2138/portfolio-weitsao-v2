@@ -38,7 +38,7 @@ const Layout: FC<Props> = ({ children, font }) => {
       >
         <Header className="sticky top-0 z-20"></Header>
         <Hamburger
-          className="absolute right-0 top-0 z-50 mr-4 mt-2 sm:hidden"
+          className="fixed right-0 top-0 z-50 mr-4 mt-2 sm:hidden"
           handleHamburgerClick={handleHamburgerClick}
           isOpen={show}
         />

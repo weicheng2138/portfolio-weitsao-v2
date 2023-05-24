@@ -6,10 +6,15 @@ const CustomLink = ({ href, children, ...rest }: AnchorProps) => {
   const isInternalLink = href && href.startsWith('/');
   const isAnchorLink = href && href.startsWith('#');
 
-  if (isInternalLink) return <Link href={href}>{children}</Link>;
+  if (isInternalLink)
+    return (
+      <Link href={href} className="font-notoSans">
+        {children}
+      </Link>
+    );
   if (isAnchorLink)
     return (
-      <a href={href} {...rest}>
+      <a href={href} {...rest} className="font-notoSans">
         {children}
       </a>
     );
@@ -20,7 +25,13 @@ const CustomLink = ({ href, children, ...rest }: AnchorProps) => {
   const ExternalLink = () => {
     const isGithub = href?.includes('github.com');
     return (
-      <a target="_blank" rel="noopener noreferrer" href={href} {...rest}>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-notoSans"
+        href={href}
+        {...rest}
+      >
         {children}
         {typeof children === 'undefined' &&
           (isGithub ? <LinkIcon kind="github" /> : <LinkIcon />)}
