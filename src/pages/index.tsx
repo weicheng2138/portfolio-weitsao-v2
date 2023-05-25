@@ -1,9 +1,21 @@
+import Card from '@/components/Card';
 import CustomHR from '@/components/CustomHR';
 import CustomLink from '@/components/CustomLink';
 import { SiteIcon, SocialIcon } from '@/components/Icons';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+type Props = {
+  imgUrl: string;
+  title: string;
+  description: string;
+  projectTagTime: {
+    time: string;
+    tags: string[];
+  };
+};
+
+import { projectConfig } from '@/configs/projectConfig';
 
 const periodDictionary = {
   morning: '早安',
@@ -51,7 +63,7 @@ export default function Home() {
             <h1 className="mt-6">Hi！{periodDictionary[periods]}</h1>
             <h1>我是 Winnie</h1>
             <p className="mt-10">
-              我觀察細膩、擅於傾聽。我想做出好看好用、讓使用者感到溫暖的產品。正在朝向成為
+              我觀察細膩、擅於傾聽。我想做出好看好用、讓使用者感到溫暖又富有人性的產品。正在朝向成為
               UI/UX 設計師持續精進中。
             </p>
           </div>
@@ -59,11 +71,25 @@ export default function Home() {
 
         <CustomHR direction="right" className="mb-10 sm:mb-20" />
 
-        <section id="project" className='className="mb-10 md:mb-20'>
+        <section
+          id="project"
+          className="mb-10 flex flex-col items-center sm:mb-20"
+        >
           <h2 className="mb-10">一起來看看我的 UI/UX 設計吧</h2>
+          {projectConfig.map((project, index) => {
+            return (
+              <CustomLink
+                key={index}
+                href="/about"
+                className="mb-10 w-full sm:mb-20"
+              >
+                <Card {...project} />
+              </CustomLink>
+            );
+          })}
         </section>
 
-        <CustomHR direction="left" />
+        <CustomHR direction="left" className="mb-10 sm:mb-20" />
       </main>
     </>
   );

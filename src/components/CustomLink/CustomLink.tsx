@@ -8,7 +8,7 @@ const CustomLink = ({ href, children, ...rest }: AnchorProps) => {
 
   if (isInternalLink)
     return (
-      <Link href={href} className="font-notoSans">
+      <Link href={href} className="font-notoSans" {...rest}>
         {children}
       </Link>
     );
