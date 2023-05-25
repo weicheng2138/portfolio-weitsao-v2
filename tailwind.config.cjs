@@ -21,6 +21,10 @@ module.exports = {
       4: '4px',
     },
     extend: {
+      strokeWidth: {
+        3: '3px',
+        4: '4px',
+      },
       colors: {
         primary: '#F9BF45',
         primaryLight: '#FAD689',

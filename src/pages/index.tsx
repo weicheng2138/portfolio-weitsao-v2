@@ -89,7 +89,7 @@ export default function Home() {
           })}
         </section>
 
-        <CustomHR direction="left" className="mb-10 sm:mb-20" />
+        <CustomHR direction="left" />
       </main>
     </>
   );

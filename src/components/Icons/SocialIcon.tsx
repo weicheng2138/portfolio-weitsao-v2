@@ -25,7 +25,7 @@ const SocialIcon = ({ kind, href }: Props) => {
   }
   return (
     <a
-      className=" block w-10"
+      className="block w-10"
       href={kind === 'gmail' ? `mailto:${href}` : href}
       target="_blank"
       rel="noreferrer noopener"
