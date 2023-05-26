@@ -20,7 +20,7 @@ const Header: FC<Props> = ({ className }) => {
           </div>
         </CustomLink>
         <div className="hidden text-sm text-secondary04 sm:flex sm:items-center ">
-          <CustomLink href="/projects">
+          <CustomLink href="/#projects">
             <span className="p-4 tracking-wide hover:text-primary">
               設計作品
             </span>

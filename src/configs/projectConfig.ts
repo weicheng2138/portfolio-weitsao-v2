@@ -7,6 +7,7 @@ export const projectConfig = [
       time: '2021 - JUL',
       tags: ['使用者介面', 'App'],
     },
+    internalLink: '/projects/railway-redesign',
   },
   {
     title: '台北捷運官網 響應式網頁 RWD 設計提案',
@@ -16,5 +17,6 @@ export const projectConfig = [
       time: '2021 - JUL',
       tags: ['網頁版', 'RWD'],
     },
+    internalLink: '/projects/metro-rwd',
   },
 ];

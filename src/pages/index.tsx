@@ -1,19 +1,9 @@
 import Card from '@/components/Card';
 import CustomHR from '@/components/CustomHR';
 import CustomLink from '@/components/CustomLink';
-import { SiteIcon, SocialIcon } from '@/components/Icons';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-type Props = {
-  imgUrl: string;
-  title: string;
-  description: string;
-  projectTagTime: {
-    time: string;
-    tags: string[];
-  };
-};
 
 import { projectConfig } from '@/configs/projectConfig';
 
@@ -72,7 +62,7 @@ export default function Home() {
         <CustomHR direction="right" className="mb-10 sm:mb-20" />
 
         <section
-          id="project"
+          id="projects"
           className="mb-10 flex flex-col items-center sm:mb-20"
         >
           <h2 className="mb-10">一起來看看我的 UI/UX 設計吧</h2>
@@ -80,7 +70,7 @@ export default function Home() {
             return (
               <CustomLink
                 key={index}
-                href="/about"
+                href={project.internalLink}
                 className="mb-10 w-full sm:mb-20"
               >
                 <Card {...project} />
