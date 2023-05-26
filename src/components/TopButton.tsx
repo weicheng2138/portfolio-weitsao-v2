@@ -2,8 +2,13 @@ import { useEffect, useState } from 'react';
 
 const TopButton = () => {
   const [isTop, setIsTop] = useState(false);
+  const [shouldScrollToTop, setShouldScrollToTop] = useState(false);
 
   useEffect(() => {
+    if (shouldScrollToTop) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setShouldScrollToTop(false);
+    }
     const handleScroll = () => {
       const scrollTop = document.documentElement.scrollTop;
       if (scrollTop > 0) {
@@ -14,20 +19,17 @@ const TopButton = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isTop]);
+  }, [isTop, shouldScrollToTop]);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+  const handleClick = () => {
+    setShouldScrollToTop(true);
   };
 
   return (
     <>
       {!isTop && (
         <button
-          onClick={scrollToTop}
+          onClick={handleClick}
           className="fixed bottom-8 right-4 h-20 w-20 
         rounded-full border border-secondary03 bg-secondary01 text-sm opacity-50 shadow-md 
         hover:border-0 hover:bg-primary hover:text-secondary01 hover:opacity-100 
