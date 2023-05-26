@@ -20,7 +20,6 @@ const Layout: FC<Props> = ({ children, font }) => {
 
   useEffect(() => {
     function handleResize() {
-      // console.log('resized to: ', window.innerWidth, 'x', window.innerHeight);
       if (window.innerWidth > 501) {
         setShow(false);
       }
@@ -47,7 +46,11 @@ const Layout: FC<Props> = ({ children, font }) => {
           {children}
         </main>
 
-        <Drawer className="fixed right-0 z-40" isShow={show} />
+        <Drawer
+          className="fixed right-0 z-40"
+          isShow={show}
+          setShow={setShow}
+        />
         <Overlay
           className="absolute inset-0 z-30"
           isShow={show}
