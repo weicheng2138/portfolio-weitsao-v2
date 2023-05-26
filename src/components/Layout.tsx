@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Drawer from '@/components/Drawer';
 import Hamburger from '@/components/Hamburger';
 import Overlay from '@/components/Overlay';
+import TopButton from '@/components/TopButton';
 
 type Props = {
   children: ReactNode;
@@ -53,6 +54,7 @@ const Layout: FC<Props> = ({ children, font }) => {
           handleClick={handleHamburgerClick}
         />
         <Footer />
+        <TopButton />
       </div>
     </>
   );
