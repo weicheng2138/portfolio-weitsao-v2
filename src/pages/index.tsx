@@ -40,7 +40,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="flex-1 px-4 sm:px-8 md:mx-auto md:w-full md:max-w-4xl">
         <section className="mb-10 flex flex-col items-center justify-center pt-10 sm:mb-20 sm:flex-row-reverse sm:gap-6 sm:pt-20">
           <Image
             src={`/gif/site-cover.gif`}

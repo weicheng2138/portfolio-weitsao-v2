@@ -5,8 +5,8 @@ function About() {
   const pClass = `mb-20 text-center text-xs sm:text-sm`;
   const liClass = `list-disc text-sm leading-6 text-secondary03`;
   return (
-    <main>
-      <section className="flex flex-col items-center justify-center lg:flex-row">
+    <main className="flex-1 px-4 sm:px-8 md:mx-auto md:w-full md:max-w-4xl">
+      <section className="mb-40 flex flex-col items-center justify-center lg:flex-row">
         <Image
           src="/winnie-tsao.png"
           alt="winnie tsao personal picture"
@@ -130,7 +130,7 @@ function About() {
           </ul>
         </div>
 
-        <h2 className="mb-20 text-center">學歷</h2>
+        <h2 className="mb-20 mt-20 text-center">學歷</h2>
 
         <div className="mb-20 grid grid-cols-3 lg:grid-rows-1">
           <AboutPageIcon

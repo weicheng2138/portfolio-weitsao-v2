@@ -42,9 +42,7 @@ const Layout: FC<Props> = ({ children, font }) => {
           handleHamburgerClick={handleHamburgerClick}
           isOpen={show}
         />
-        <main className="flex-1 px-4 sm:px-8 md:mx-auto md:w-full md:max-w-4xl">
-          {children}
-        </main>
+        <main className="relative">{children}</main>
 
         <Drawer
           className="fixed right-0 z-40"
