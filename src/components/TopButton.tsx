@@ -41,9 +41,9 @@ const TopButton = () => {
             stroke="currentColor"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
               d="M5 10l7-7m0 0l7 7m-7-7v18"
             />
           </svg>
