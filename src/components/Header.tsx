@@ -9,7 +9,7 @@ const Header: FC<Props> = ({ className }) => {
   return (
     <>
       <header
-        className={`${className} flex items-center justify-between bg-secondary01 px-4 py-2 shadow-sm sm:px-8`}
+        className={`${className} flex items-center justify-between bg-secondary01 px-4 shadow-sm sm:px-8`}
       >
         <CustomLink href="/">
           <div className="flex items-center gap-4">
@@ -20,13 +20,21 @@ const Header: FC<Props> = ({ className }) => {
           </div>
         </CustomLink>
         <div className="hidden text-sm text-secondary04 sm:flex sm:items-center ">
-          <CustomLink href="/#projects">
-            <span className="p-4 tracking-wide hover:text-primary">
+          <CustomLink
+            href="/#projects"
+            className="focus:border-b-2 focus:border-primary"
+          >
+            <span className="inline-block p-4 tracking-wide hover:text-primary">
               設計作品
             </span>
           </CustomLink>
-          <CustomLink href="/about">
-            <span className="p-4 tracking-wide hover:text-primary">關於我</span>
+          <CustomLink
+            href="/about"
+            className="focus:border-b-2 focus:border-primary"
+          >
+            <span className="inline-block p-4 tracking-wide hover:text-primary">
+              關於我
+            </span>
           </CustomLink>
           <CustomLink href="/weitsao_resume.pdf">
             <button className="rounded-full border border-secondary02 px-4 py-[4px] tracking-wide hover:border-transparent hover:bg-primary hover:text-white">
