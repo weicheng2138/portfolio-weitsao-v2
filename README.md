@@ -1,6 +1,20 @@
 # Winnie's Portfolio with Next.js
 
+![Vercel](https://vercelbadge.vercel.app/api/weicheng2138/portfolio-weitsao-v2)
+
 A new version of server-side rendering portfolio app.
+
+## 🎨 Color Reference
+
+| Color                    | Hex                                                                |
+| ------------------------ | ------------------------------------------------------------------ |
+| Primary Color            | ![#F9BF45](https://via.placeholder.com/10/F9BF45?text=+) `#F9BF45` |
+| Primary Light            | ![#FAD689](https://via.placeholder.com/10/FAD689?text=+) `#FAD689` |
+| primary Dark             | ![#C28F06](https://via.placeholder.com/10/C28F06?text=+) `#C28F06` |
+| Secondary01 (Background) | ![#FAFAFA](https://via.placeholder.com/10/FAFAFA?text=+) `#FAFAFA` |
+| Secondary02              | ![#E0E0E0](https://via.placeholder.com/10/E0E0E0?text=+) `#E0E0E0` |
+| Secondary03              | ![#757575](https://via.placeholder.com/10/757575?text=+) `#757575` |
+| Secondary04              | ![#212121](https://via.placeholder.com/10/212121?text=+) `#212121` |
 
 ## Features
 
@@ -29,10 +43,6 @@ pnpm start
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 

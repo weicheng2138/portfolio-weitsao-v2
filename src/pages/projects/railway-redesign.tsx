@@ -25,9 +25,8 @@ const RailwayRedesign = () => {
         width={0}
         height={0}
         priority
-        className="absolute left-0 right-0 top-0 h-[240px] w-full object-cover
-        md:h-[320px] lg:hidden"
-        sizes="80vw"
+        className="absolute left-0 right-0 top-0 h-[240px] w-full object-cover md:h-[320px] lg:block lg:h-[440px]"
+        sizes="100vh"
       />
       <main className="mt-[240px] flex-1 px-4 pt-12 sm:px-8 md:mx-auto md:mt-[320px] md:w-full md:max-w-4xl lg:mt-[440px] lg:pt-20">
         <div className="flex justify-between">
