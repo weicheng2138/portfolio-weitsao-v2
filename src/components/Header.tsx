@@ -9,7 +9,7 @@ const Header: FC<Props> = ({ className }) => {
   return (
     <>
       <header
-        className={`${className} flex items-center justify-between bg-secondary01 px-4 shadow-sm sm:px-8`}
+        className={`${className} flex h-[56px] items-center justify-between bg-secondary01 px-4 shadow-sm sm:px-8`}
       >
         <CustomLink href="/">
           <div className="flex items-center gap-4">
