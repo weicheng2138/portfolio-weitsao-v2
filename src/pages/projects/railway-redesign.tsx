@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import CustomHR from '@/components/CustomHR';
-import CustomLink from '@/components/CustomLink';
+import InternalLinkButton from '@/components/InternallinkButton';
+import { projectConfig } from '@/configs/projectConfig';
+
 const RailwayRedesign = () => {
+  const pageProjectId = 0;
   const imgDescription = 'font-notoSans text-sm text-secondary03 tracking-wide';
   return (
     <>
@@ -456,32 +459,19 @@ const RailwayRedesign = () => {
 
         <section className="flex flex-col items-center justify-center">
           <h1 className="mb-20 text-center">看看其他專案</h1>
-          <CustomLink href="/projects/railway-redesign">
-            <div className="mb-10 flex flex-col items-center justify-center rounded-lg border p-6 transition-all hover:cursor-pointer hover:shadow-md sm:h-[168px] sm:max-w-[504px] sm:flex-row md:max-w-[600px] ">
-              <Image
-                src="/images/metro-cover.png"
-                alt="metro cover"
-                width={0}
-                height={0}
-                className="mb-4 h-auto w-full rounded-lg object-cover sm:mb-0 sm:h-32 sm:w-32 "
-                sizes="70vh"
-              />
-              <div className="flex flex-col sm:ml-10">
-                <h1 className="mb-6 text-xl">
-                  台北捷運官網 - <br />
-                  響應式網頁 (RWD) 設計提案
-                </h1>
-                <div className="flex">
-                  <p className="mr-2 rounded-lg border border-secondary03 px-3 py-1 text-xs text-secondary03 ">
-                    RWD 響應式設計
-                  </p>
-                  <p className="mr-2 rounded-lg border border-secondary03 px-3 py-1 text-xs text-secondary03 ">
-                    網頁版
-                  </p>
-                </div>
-              </div>
-            </div>
-          </CustomLink>
+          {projectConfig.map((project) => {
+            if (project.id !== pageProjectId) {
+              return (
+                <InternalLinkButton
+                  internalLink={project.internalLink}
+                  key={project.id}
+                  imgUrl={project.imgUrl}
+                  title={project.title}
+                  projectTagTime={project.projectTagTime}
+                />
+              );
+            }
+          })}
         </section>
       </main>
     </>

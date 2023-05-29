@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import CustomHR from '@/components/CustomHR';
+import { projectConfig } from '@/configs/projectConfig';
+import InternalLinkButton from '@/components/InternallinkButton';
+
 const MetroRwd = () => {
+  const pageProjectId = 1;
   const imgDescription = 'font-notoSans text-sm text-secondary03 tracking-wide';
   return (
     <>
@@ -280,6 +284,23 @@ const MetroRwd = () => {
           </p>
         </section>
         <CustomHR className="mb-20" direction="right" />
+
+        <section className="flex flex-col items-center justify-center">
+          <h1 className="mb-20 text-center">看看其他專案</h1>
+          {projectConfig.map((project) => {
+            if (project.id !== pageProjectId) {
+              return (
+                <InternalLinkButton
+                  internalLink={project.internalLink}
+                  key={project.id}
+                  imgUrl={project.imgUrl}
+                  title={project.title}
+                  projectTagTime={project.projectTagTime}
+                />
+              );
+            }
+          })}
+        </section>
       </main>
     </>
   );
