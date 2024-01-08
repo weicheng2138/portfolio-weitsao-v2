@@ -7,10 +7,10 @@ type Props = {
 };
 const Header: FC<Props> = ({ className }) => {
   return (
-    <>
-      <header
-        className={`${className} flex h-[56px] items-center justify-between bg-secondary01 px-4 shadow-sm sm:px-8`}
-      >
+    <header
+      className={`${className} flex h-[56px] justify-center bg-secondary01 shadow-sm`}
+    >
+      <div className="flex w-full max-w-5xl items-center justify-between px-4 sm:px-6">
         <CustomLink href="/">
           <div className="flex items-center gap-4">
             <SiteIcon />
@@ -42,8 +42,8 @@ const Header: FC<Props> = ({ className }) => {
             </button>
           </CustomLink>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 export default Header;
