@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-padding-top: 56px;
+  scroll-behavior: smooth;
+}
+
 h1 {
   @apply font-notoSerif text-[32px] font-bold tracking-wide;
 }

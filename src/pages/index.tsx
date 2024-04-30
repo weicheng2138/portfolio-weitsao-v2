@@ -59,11 +59,11 @@ export default function Home() {
           </div>
         </section>
 
-        <CustomHR direction="right" className="mb-10 sm:mb-20" />
+        <CustomHR direction="right" />
 
         <section
           id="projects"
-          className="mb-10 flex flex-col items-center sm:mb-20"
+          className="mb-10 flex flex-col items-center pt-10 sm:mb-20 sm:pt-14"
         >
           <h2 className="mb-10">一起來看看我的 UI/UX 設計吧</h2>
           {projectConfig.map((project, index) => {
