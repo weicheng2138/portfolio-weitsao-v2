@@ -11,7 +11,7 @@ const Overlay: FC<Props> = ({ className, isShow, handleClick }) => {
       {isShow && (
         <div
           onClick={() => handleClick()}
-          className={`${className} backdrop-blur transition`}
+          className={`${className} backdrop-blur-sm transition`}
         ></div>
       )}
     </>

@@ -4,7 +4,7 @@ type Props = {
 
 const ImageDescription = ({ description }: Props) => {
   return (
-    <p className="font-notoSans text-sm tracking-wide text-secondary03">
+    <p className="font-noto-sans text-sm tracking-wide text-secondary03">
       {description}
     </p>
   );

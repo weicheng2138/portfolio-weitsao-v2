@@ -6,7 +6,7 @@ import { projectConfig } from '@/configs/projectConfig';
 
 const RailwayRedesign = () => {
   const pageProjectId = 0;
-  const imgDescription = 'font-notoSans text-sm text-secondary03 tracking-wide';
+  const imgDescription = 'font-noto-sans text-sm text-secondary03 tracking-wide';
   return (
     <>
       <Head>

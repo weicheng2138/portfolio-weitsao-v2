@@ -25,7 +25,7 @@ function Footer() {
         <CustomLink href="/">
           <div className="flex items-center gap-4">
             <SiteIcon />
-            <h1 className="font-notoSans text-sm font-normal tracking-wide text-secondary04">
+            <h1 className="font-noto-sans text-sm font-normal tracking-wide text-secondary04">
               WEI．TSAO
             </h1>
           </div>

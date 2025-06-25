@@ -8,10 +8,9 @@ import TopButton from '@/components/TopButton';
 
 type Props = {
   children: ReactNode;
-  font: string;
 };
 
-const Layout: FC<Props> = ({ children, font }) => {
+const Layout: FC<Props> = ({ children }) => {
   const [show, setShow] = useState(false);
 
   function handleHamburgerClick() {
@@ -34,7 +33,7 @@ const Layout: FC<Props> = ({ children, font }) => {
   return (
     <>
       <div
-        className={`${font} relative flex min-h-screen w-full flex-col justify-between bg-secondary01`}
+        className={`relative flex min-h-screen w-full flex-col justify-between bg-secondary01`}
       >
         <Header className="sticky top-0 z-20" />
         <Hamburger
