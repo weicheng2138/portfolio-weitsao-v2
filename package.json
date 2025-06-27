@@ -15,10 +15,13 @@
   },
   "dependencies": {
     "clsx": "^1.2.1",
+    "lucide-react": "^0.523.0",
     "next": "13.3.0",
+    "prettier": "^3.6.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sharp": "^0.32.0",
+    "tailwind-merge": "^3.3.1",
     "typescript": "5.0.3"
   },
   "devDependencies": {
@@ -33,7 +36,6 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "postcss": "^8.4.21",
-    "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.6.13",
     "tailwindcss": "^4.1.10"
   },
