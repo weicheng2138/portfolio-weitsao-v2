@@ -116,7 +116,7 @@
 html {
   scroll-padding-top: 56px;
   scroll-behavior: smooth;
-  @apply font-noto-sans;
+  @apply font-noto-sans bg-secondary01;
 }
 
 h1 {
@@ -124,7 +124,7 @@ h1 {
 }
 
 h2 {
-  @apply font-noto-sans text-secondary05 text-[22px] font-bold;
+  @apply font-noto-sans text-secondary05 text-[24px] font-bold;
 }
 
 h3 {
@@ -132,11 +132,11 @@ h3 {
 }
 
 p {
-  @apply font-noto-sans text-base;
+  @apply font-noto-sans text-base font-light;
 }
 
 li {
-  @apply font-noto-sans text-base;
+  @apply font-noto-sans ml-4 text-base font-light;
 }
 
 caption {

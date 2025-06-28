@@ -32,15 +32,15 @@ function Footer() {
                 下載簡歷
               </button>
             </a>
-            <Link href="/#projects">
-              <button
-                className={cn(
-                  'bg-primary hover:bg-primary-dark cursor-pointer rounded-full px-5 py-[10px] tracking-wide text-white transition-colors',
-                  'flex items-center gap-2'
-                )}
-              >
-                專案內容
-              </button>
+
+            <Link
+              href={'/projects'}
+              className={cn(
+                'bg-primary hover:bg-primary-dark cursor-pointer rounded-full px-5 py-[10px] tracking-wide text-white transition-colors',
+                'flex w-fit items-center gap-2 text-sm font-bold'
+              )}
+            >
+              專案內容
             </Link>
           </div>
         </section>

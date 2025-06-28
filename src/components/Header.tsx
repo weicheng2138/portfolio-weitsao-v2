@@ -15,21 +15,21 @@ const Header: FC<Props> = ({ className }) => {
       <div className="flex w-full max-w-5xl items-center justify-between px-4 md:px-6">
         <CustomLink href="/">
           <div className="flex items-center gap-4">
-            <SiteIcon />
+            <SiteIcon className="hover:animate-spin" />
             <span className="font-noto-sans text-secondary05 text-sm font-normal tracking-wide">
               WEI．TSAO
             </span>
           </div>
         </CustomLink>
         <div className="text-secondary04 hidden text-sm md:flex md:items-center">
+          <CustomLink href="/" className="mr-3">
+            <span className="hover:text-primary inline-block p-4 font-bold tracking-wide">
+              關於我
+            </span>
+          </CustomLink>
           <CustomLink href="/projects">
             <span className="hover:text-primary inline-block p-4 font-bold tracking-wide">
               設計作品
-            </span>
-          </CustomLink>
-          <CustomLink href="/about" className="mr-3">
-            <span className="hover:text-primary inline-block p-4 font-bold tracking-wide">
-              關於我
             </span>
           </CustomLink>
           <CustomLink href="/weitsao_resume.pdf"></CustomLink>
