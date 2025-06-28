@@ -120,11 +120,11 @@ html {
 }
 
 h1 {
-  @apply font-noto-sans text-[28px] font-bold tracking-wide;
+  @apply font-noto-sans text-secondary05 text-[28px] font-bold tracking-wide;
 }
 
 h2 {
-  @apply font-noto-sans text-[22px] font-bold tracking-wide;
+  @apply font-noto-sans text-secondary05 text-[22px] font-bold;
 }
 
 h3 {
@@ -140,7 +140,7 @@ li {
 }
 
 caption {
-  @apply font-noto-sans text-[11px] font-medium;
+  @apply font-noto-sans text-secondary04 text-[11px] font-medium;
 }
 
 button {

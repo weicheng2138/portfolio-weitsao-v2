@@ -3,10 +3,13 @@ import BehanceSVG from './behance.svg';
 import InstagramSVG from './ig.svg';
 import CakeresumeSVG from './cakeResume.svg';
 import GmailSVG from './gmail.svg';
+import LinkedinSVG from './linkedin.svg';
 
 type Props = {
-  kind: 'behance' | 'instagram' | 'cakeresume' | 'gmail';
+  kind: 'behance' | 'instagram' | 'cakeresume' | 'gmail' | 'linkedin';
   href: string;
+  height?: number;
+  width?: number;
 };
 
 const srcKind = {
@@ -14,8 +17,9 @@ const srcKind = {
   instagram: InstagramSVG,
   cakeresume: CakeresumeSVG,
   gmail: GmailSVG,
+  linkedin: LinkedinSVG,
 };
-const SocialIcon = ({ kind, href }: Props) => {
+const SocialIcon = ({ kind, href, height = 48, width = 48 }: Props) => {
   if (
     !href ||
     (kind === 'gmail' &&
@@ -30,7 +34,12 @@ const SocialIcon = ({ kind, href }: Props) => {
       target="_blank"
       rel="noreferrer noopener"
     >
-      <Image width={48} height={48} src={srcKind[kind]} alt="site-icon" />
+      <Image
+        width={width}
+        height={height}
+        src={srcKind[kind]}
+        alt="site-icon"
+      />
     </a>
   );
 };

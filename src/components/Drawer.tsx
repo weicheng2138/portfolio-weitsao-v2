@@ -21,7 +21,7 @@ const Drawer: FC<Props> = ({ isShow, className, setShow }) => {
         )}
       >
         <CustomLink
-          href="/#projects"
+          href="/projects"
           onClick={() => setShow((prev: boolean) => !prev)}
         >
           <span className="hover:text-primary p-4 font-bold tracking-wide">

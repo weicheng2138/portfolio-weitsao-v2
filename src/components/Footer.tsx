@@ -1,51 +1,61 @@
 import { footerConfig } from '@/configs/footerConfig';
-import CustomLink from '@/components/CustomLink';
-import { SiteIcon, SocialIcon } from '@/components/Icons';
-
-type socialLinkType = keyof typeof footerConfig.socialLinks;
-const socialLinksKeys: socialLinkType[] = Object.keys(
-  footerConfig.socialLinks
-) as socialLinkType[];
+import { SocialIcon } from '@/components/Icons';
+import { cn } from '@/lib/utils';
+import { Download } from 'lucide-react';
+import Link from 'next/link';
 
 function Footer() {
   return (
-    <footer className="flex w-full flex-col items-center justify-center border-b-[6px] border-primary bg-secondary01 md:h-60 md:flex-row md:items-center md:justify-evenly">
-      <section className="mb-20 mt-10 flex flex-row gap-6 md:m-0">
-        {socialLinksKeys.map((key, index) => {
-          return (
-            <SocialIcon
-              href={footerConfig.socialLinks[key]}
-              key={index}
-              kind={key}
-            />
-          );
-        })}
-      </section>
-      <section className="flex flex-col items-center">
-        <CustomLink href="/">
-          <div className="flex items-center gap-4">
-            <SiteIcon />
-            <h1 className="font-noto-sans text-sm font-normal tracking-wide text-secondary04">
-              WEI．TSAO
-            </h1>
+    <footer className="border-primary bg-secondary01 flex w-full flex-col items-center justify-center border-b-[6px] md:h-60 md:flex-row md:items-center md:justify-evenly">
+      <section className="mt-10 mb-10 flex w-full max-w-5xl flex-col gap-6 px-8 md:px-10">
+        <h2 className="text-secondary05">與我聯絡</h2>
+        <section className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div className="text-secondary05 flex flex-col">
+            <span className="mb-1 text-2xl font-normal">hl6jo3@gmail.com</span>
+            <span className="text04 text-sm font-normal">
+              我目前正在積極尋找全職工作機會，歡迎與我聯絡。
+            </span>
           </div>
-        </CustomLink>
-        <p className="mb-10 text-center text-xs leading-5 text-secondary03 md:mb-3">
-          <CustomLink
-            href={footerConfig.design.link}
-            className="hover:text-primary"
-          >
-            Design - Winnie Tsao
-          </CustomLink>
-          &nbsp;|&nbsp;
-          <CustomLink
-            href={footerConfig.build.link}
-            className="hover:text-primary"
-          >
-            Build - Keck Hung
-          </CustomLink>
-          <br />© 2023
-        </p>
+          <div className="flex gap-2">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://www.weitsao.com/weitsao_resume.pdf`}
+            >
+              <button
+                className={cn(
+                  'bg-primary hover:bg-primary-dark cursor-pointer rounded-full px-5 py-[10px] tracking-wide text-white transition-colors',
+                  'flex items-center gap-2'
+                )}
+              >
+                <Download className="size-4" />
+                下載簡歷
+              </button>
+            </a>
+            <Link href="/#projects">
+              <button
+                className={cn(
+                  'bg-primary hover:bg-primary-dark cursor-pointer rounded-full px-5 py-[10px] tracking-wide text-white transition-colors',
+                  'flex items-center gap-2'
+                )}
+              >
+                專案內容
+              </button>
+            </Link>
+          </div>
+        </section>
+
+        <section className="flex flex-row items-center justify-between">
+          <SocialIcon
+            kind="linkedin"
+            href="https://www.linkedin.com/in/wei-tsao/"
+            height={24}
+            width={24}
+          />
+          <p className="text-secondary05">
+            © 2025 Wei Tsao. All Rights Reserved.
+          </p>
+        </section>
       </section>
     </footer>
   );

@@ -58,28 +58,6 @@ export default function Home() {
             </p>
           </div>
         </section>
-
-        <CustomHR direction="right" />
-
-        <section
-          id="projects"
-          className="mb-10 flex flex-col items-center pt-10 sm:mb-20 sm:pt-14"
-        >
-          <h2 className="mb-10">一起來看看我的 UI/UX 設計吧</h2>
-          {projectConfig.map((project, index) => {
-            return (
-              <CustomLink
-                key={index}
-                href={project.internalLink}
-                className="mb-10 w-full sm:mb-20"
-              >
-                <Card {...project} />
-              </CustomLink>
-            );
-          })}
-        </section>
-
-        <CustomHR direction="left" />
       </main>
     </>
   );
