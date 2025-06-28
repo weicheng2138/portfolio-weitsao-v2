@@ -18,7 +18,7 @@ export default function JobCard({
         {period}
       </div>
       <section className="flex basis-4/5 flex-col gap-2">
-        <div className="flex flex-col gap-4 md:flex-row">
+        <div className="flex flex-col md:flex-row md:gap-4">
           <h3 className="text-secondary05">{jobTitle}</h3>
           <h3 className="text-secondary05">{company}</h3>
         </div>

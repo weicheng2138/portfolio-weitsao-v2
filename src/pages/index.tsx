@@ -77,7 +77,7 @@ export default function Home() {
         <section className="mb-40 flex flex-col gap-5">
           <h2>工作技能</h2>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-10">
-            <div className="flex flex-col rounded-2xl bg-white p-6">
+            <div className="flex flex-col gap-1 rounded-2xl bg-white p-6">
               <h3 className="text-secondary05 mb-2">使用者經驗研究</h3>
               <span className="text-secondary05 text-sm font-normal">
                 使用者訪談
@@ -96,7 +96,7 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="flex flex-col rounded-2xl bg-white p-6">
+            <div className="flex flex-col gap-1 rounded-2xl bg-white p-6">
               <h3 className="text-secondary05 mb-2">介面設計</h3>
               <span className="text-secondary05 text-sm font-normal">
                 Wireframe 線匡稿
@@ -109,7 +109,7 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="flex flex-col rounded-2xl bg-white p-6">
+            <div className="flex flex-col gap-1 rounded-2xl bg-white p-6">
               <h3 className="text-secondary05 mb-2">使用者測試與回饋</h3>
               <span className="text-secondary05 text-sm font-normal">
                 易用性測試
