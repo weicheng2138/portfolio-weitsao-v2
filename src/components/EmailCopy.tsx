@@ -20,9 +20,7 @@ export default function Component({
 
       // Reset the copied state after 2 seconds
       setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.warn(err);
-    }
+    } catch (err) {}
   };
 
   return (
