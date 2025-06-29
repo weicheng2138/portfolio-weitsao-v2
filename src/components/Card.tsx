@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import ImageDescription from '@/components/ImageDescription';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 type Props = {
