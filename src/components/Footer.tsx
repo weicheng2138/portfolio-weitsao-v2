@@ -3,6 +3,7 @@ import { SocialIcon } from '@/components/Icons';
 import { cn } from '@/lib/utils';
 import { Download } from 'lucide-react';
 import Link from 'next/link';
+import EmailCopy from '@/components/EmailCopy';
 
 function Footer() {
   return (
@@ -11,8 +12,12 @@ function Footer() {
         <h2 className="text-secondary05">與我聯絡</h2>
         <section className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div className="text-secondary05 flex flex-col">
-            <span className="mb-1 text-2xl font-normal">hl6jo3@gmail.com</span>
-            <span className="text04 text-sm font-normal">
+            <EmailCopy
+              email={'hl6jo3@gmail.com'}
+              className="mb-1 text-2xl font-normal"
+            />
+
+            <span className="text-secondary04 text-sm font-normal">
               我目前正在積極尋找全職工作機會，歡迎與我聯絡。
             </span>
           </div>
@@ -40,7 +45,7 @@ function Footer() {
                 'flex w-fit items-center gap-2 text-sm font-bold'
               )}
             >
-              專案內容
+              設計作品
             </Link>
           </div>
         </section>

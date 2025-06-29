@@ -20,20 +20,18 @@ const Drawer: FC<Props> = ({ isShow, className, setShow }) => {
           'bg-secondary01 inset-y-0 flex h-full min-w-[75vw] flex-col items-center justify-evenly text-sm opacity-80 shadow-md transition'
         )}
       >
+        <CustomLink href="/" onClick={() => setShow((prev: boolean) => !prev)}>
+          <span className="hover:text-primary p-4 font-bold tracking-wide">
+            關於我
+          </span>
+        </CustomLink>
+
         <CustomLink
           href="/projects"
           onClick={() => setShow((prev: boolean) => !prev)}
         >
           <span className="hover:text-primary p-4 font-bold tracking-wide">
             設計作品
-          </span>
-        </CustomLink>
-        <CustomLink
-          href="/about"
-          onClick={() => setShow((prev: boolean) => !prev)}
-        >
-          <span className="hover:text-primary p-4 font-bold tracking-wide">
-            關於我
           </span>
         </CustomLink>
 

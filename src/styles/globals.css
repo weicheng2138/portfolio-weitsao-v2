@@ -144,7 +144,7 @@ caption {
 }
 
 button {
-  @apply cursor-pointer text-sm font-bold;
+  @apply cursor-pointer;
 }
 
 a {

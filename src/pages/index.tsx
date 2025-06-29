@@ -21,7 +21,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex-1 px-8 sm:px-8 md:mx-auto md:w-full md:max-w-4xl">
+      <main className="flex-1 px-8 md:mx-auto md:w-full md:max-w-4xl">
         <section className="bg-secondary01 mb-40 flex flex-col items-center justify-center md:flex-row">
           <div className="flex basis-2/3 flex-col gap-10 pt-20">
             <h1>Wei Tsao 曹瑋</h1>
@@ -58,7 +58,7 @@ export default function Home() {
                   'flex w-fit items-center gap-2 text-sm font-bold'
                 )}
               >
-                專案內容
+                設計作品
               </Link>
             </div>
           </div>

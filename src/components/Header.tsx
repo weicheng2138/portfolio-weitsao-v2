@@ -22,12 +22,12 @@ const Header: FC<Props> = ({ className }) => {
           </div>
         </CustomLink>
         <div className="text-secondary04 hidden text-sm md:flex md:items-center">
-          <CustomLink href="/" className="mr-3">
+          <CustomLink href="/">
             <span className="hover:text-primary inline-block p-4 font-bold tracking-wide">
               關於我
             </span>
           </CustomLink>
-          <CustomLink href="/projects">
+          <CustomLink href="/projects" className="mr-3">
             <span className="hover:text-primary inline-block p-4 font-bold tracking-wide">
               設計作品
             </span>
