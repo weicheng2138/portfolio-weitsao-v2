@@ -22,7 +22,7 @@ export default function Page() {
           <main className="flex-1 px-8 md:mx-auto md:w-full md:max-w-4xl">
             <Link
               href="/projects"
-              className="text-secondary04 hover:text-primary my-3 flex w-fit items-center gap-2 py-2 pr-2 text-sm font-bold"
+              className="text-secondary04 hover:text-primary my-3 mb-4 flex w-fit items-center gap-2 py-2 pr-2 text-sm font-bold"
             >
               <ChevronLeft />
               返回設計作品
@@ -40,7 +40,7 @@ export default function Page() {
                   );
                 })}
               </div>
-              <h1>{content.title}</h1>
+              <h1 className="mb-8">{content.title}</h1>
 
               <div>
                 <Image
