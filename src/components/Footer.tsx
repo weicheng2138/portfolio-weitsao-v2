@@ -25,7 +25,7 @@ function Footer() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href={`https://www.weitsao.com/weitsao_resume.pdf`}
+              href={`/weitsao_resume.pdf`}
             >
               <button
                 className={cn(
@@ -57,9 +57,9 @@ function Footer() {
             height={24}
             width={24}
           />
-          <p className="text-secondary05">
+          <span className="text-secondary04 text-xs">
             © 2025 Wei Tsao. All Rights Reserved.
-          </p>
+          </span>
         </section>
       </section>
     </footer>

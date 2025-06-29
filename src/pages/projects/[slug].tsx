@@ -3,6 +3,14 @@ import { projectContents } from '@/configs/projectConfig';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselDotNavigation,
+  CarouselItem,
+} from '@/components/ui/carousel';
+import ImageCarousel from '@/components/ImageCarousel';
+import { cn } from '@/lib/utils';
 
 export default function Page() {
   const router = useRouter();
@@ -52,7 +60,9 @@ export default function Page() {
                   key={`${index}-${content.title}`}
                   className="mb-10 flex flex-col"
                 >
-                  <h1 className="mb-10">{content.title}</h1>
+                  {content.title !== '' && (
+                    <h1 className="mb-5">{content.title}</h1>
+                  )}
                   {content.type === 'default' && <p>{content.paragraph}</p>}
                   {content.type === 'multiple-paragraph' &&
                     content.paragraph.map((subParagraph, subIndex) => (
@@ -63,9 +73,13 @@ export default function Page() {
 
                   {content.type === 'sub-paragraph' &&
                     content.subContents.map((subContent, subIndex) => (
-                      <div key={subIndex} className="mb-10 flex flex-col gap-3">
-                        <h3 className="text-secondary05">{subContent.title}</h3>
-                        <p>{subContent.paragraph}</p>
+                      <div key={subIndex} className={cn('flex flex-col gap-3')}>
+                        {subContent.title && (
+                          <h3 className={cn('text-secondary05 mt-10')}>
+                            {subContent.title}
+                          </h3>
+                        )}
+                        <p className="py-2">{subContent.paragraph}</p>
                       </div>
                     ))}
 
@@ -81,6 +95,25 @@ export default function Page() {
                       ))}
                     </ul>
                   )}
+
+                  {content.type === 'picture' &&
+                    content.imageUrls.length > 1 && (
+                      <ImageCarousel imageUrls={content.imageUrls} />
+                    )}
+
+                  {content.type === 'picture' &&
+                    content.imageUrls.length === 1 && (
+                      <div>
+                        <Image
+                          src={content.imageUrls[0]}
+                          alt="project cover"
+                          className="aspect-5/3 h-full w-full rounded-2xl object-contain"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                        />
+                      </div>
+                    )}
                 </div>
               ))}
             </section>

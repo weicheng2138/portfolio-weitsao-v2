@@ -33,10 +33,11 @@ const Header: FC<Props> = ({ className }) => {
             </span>
           </CustomLink>
           <CustomLink href="/weitsao_resume.pdf"></CustomLink>
+
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={`https://www.weitsao.com/weitsao_resume.pdf`}
+            href={`/weitsao_resume.pdf`}
           >
             <button
               className={cn(

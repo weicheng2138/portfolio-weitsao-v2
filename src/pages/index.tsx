@@ -38,7 +38,7 @@ export default function Home() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href={`https://www.weitsao.com/weitsao_resume.pdf`}
+                href={`/weitsao_resume.pdf`}
               >
                 <button
                   className={cn(
