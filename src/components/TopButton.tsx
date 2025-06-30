@@ -30,10 +30,7 @@ const TopButton = () => {
       {!isTop && (
         <button
           onClick={handleClick}
-          className="fixed bottom-8 right-4 h-20 w-20 
-        rounded-full border border-secondary03 bg-secondary01 text-sm opacity-50 shadow-md 
-        hover:border-0 hover:bg-primary hover:text-secondary01 hover:opacity-100 
-        sm:right-8 lg:right-[50%] lg:translate-x-[500px] lg:transform"
+          className="border-secondary03 bg-secondary01 hover:bg-primary hover:text-secondary01 fixed right-4 bottom-8 h-20 w-20 cursor-pointer rounded-full border opacity-50 shadow-md hover:border-0 hover:opacity-100 sm:right-8 lg:right-[50%] lg:translate-x-[500px] lg:transform"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -12,11 +12,11 @@ const Hamburger: FC<Props> = ({ handleHamburgerClick, className, isOpen }) => {
 
   // FIX: CLS problem for being considered as janking animation
   if (isOpen) {
-    beforeHamburger += ` before:animate-beforeHamburgerIn`;
-    afterHamburger += ` after:animate-afterHamburgerIn`;
+    beforeHamburger += ` before:animate-before-hamburger-in`;
+    afterHamburger += ` after:animate-after-hamburger-in`;
   } else {
-    beforeHamburger += ` before:animate-beforeHamburgerOut`;
-    afterHamburger += ` after:animate-afterHamburgerOut`;
+    beforeHamburger += ` before:animate-before-hamburger-out`;
+    afterHamburger += ` after:animate-after-hamburger-out`;
   }
   return (
     <>

@@ -8,13 +8,13 @@ const CustomLink = ({ href, children, ...rest }: AnchorProps) => {
 
   if (isInternalLink)
     return (
-      <Link href={href} className="font-notoSans" {...rest}>
+      <Link href={href} className="font-noto-sans" {...rest}>
         {children}
       </Link>
     );
   if (isAnchorLink)
     return (
-      <a href={href} {...rest} className="font-notoSans">
+      <a href={href} {...rest} className="font-noto-sans">
         {children}
       </a>
     );
@@ -28,7 +28,7 @@ const CustomLink = ({ href, children, ...rest }: AnchorProps) => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        className="font-notoSans"
+        className="font-noto-sans"
         href={href}
         {...rest}
       >

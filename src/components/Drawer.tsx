@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import { FC } from 'react';
 import CustomLink from '@/components/CustomLink';
+import { cn } from '@/lib/utils';
+import { Download } from 'lucide-react';
 
 type Props = {
   className?: string;
@@ -15,26 +17,39 @@ const Drawer: FC<Props> = ({ isShow, className, setShow }) => {
           { 'translate-x-0': isShow },
           { 'translate-x-full': !isShow },
           className,
-          'inset-y-0 flex h-full min-w-[75vw] flex-col items-center justify-evenly bg-secondary01 text-sm opacity-80 shadow-md transition'
+          'bg-secondary01 inset-y-0 flex h-full min-w-[75vw] flex-col items-center justify-evenly text-sm opacity-80 shadow-md transition'
         )}
       >
+        <CustomLink href="/" onClick={() => setShow((prev: boolean) => !prev)}>
+          <span className="hover:text-primary p-4 font-bold tracking-wide">
+            關於我
+          </span>
+        </CustomLink>
+
         <CustomLink
-          href="/#projects"
+          href="/projects"
           onClick={() => setShow((prev: boolean) => !prev)}
         >
-          <span className="p-4 tracking-wide hover:text-primary">設計作品</span>
+          <span className="hover:text-primary p-4 font-bold tracking-wide">
+            設計作品
+          </span>
         </CustomLink>
-        <CustomLink
-          href="/about"
-          onClick={() => setShow((prev: boolean) => !prev)}
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`/weitsao_resume.pdf`}
         >
-          <span className="p-4 tracking-wide hover:text-primary">關於我</span>
-        </CustomLink>
-        <CustomLink href="/weitsao_resume.pdf">
-          <button className="rounded-full border border-secondary02 px-4 py-[4px] tracking-wide hover:border-transparent hover:bg-primary hover:text-white">
+          <button
+            className={cn(
+              'bg-primary hover:bg-primary-dark cursor-pointer rounded-full px-5 py-[10px] tracking-wide text-white transition-colors',
+              'flex items-center gap-2'
+            )}
+          >
+            <Download className="size-4" />
             下載簡歷
           </button>
-        </CustomLink>
+        </a>
       </div>
     </>
   );
