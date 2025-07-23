@@ -325,12 +325,6 @@ export const projectContents = new Map<
             '透過上述定義問題的部分，可以發現三大問題「整合功能」、「優化介面」及「調整流程」，因此在這個專案中，先開始盤點目前台鐵e訂通APP的功能架構，並針對這些功能進行畫面的重新設計。',
         },
         {
-          type: 'default',
-          title: '發現與洞察',
-          paragraph:
-            '我們透過訪談發現，使用者在旅途過程中所遇到的困擾包含：行程安排的困難、行李移動不方便以及置物櫃的使用三大問題。',
-        },
-        {
           type: 'sub-paragraph',
           title: '設計畫面與樣式',
           subContents: [
